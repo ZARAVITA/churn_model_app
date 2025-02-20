@@ -38,7 +38,7 @@ st.set_page_config(page_title="ChurnPredictorZ", layout="wide")
 # Ajouter le logo en haut à droite
 col1, col2 = st.columns([10, 2])
 with col1:
-    st.title("Prédiction de Churn Bancaire")
+    st.title("ChurnPredictorZ")
     st.markdown("""
 ## 🔍 Prédiction de Churn Bancaire  
 Anticipez le départ de vos clients grâce à un modèle avancé de **réseaux de neurones artificiels (ANN)**.  
