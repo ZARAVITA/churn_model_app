@@ -72,7 +72,7 @@ with st.form("client_info"):
     #Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
     #CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
 
-    col1, col2, col3 = st.columns(4)
+    col1, col2, col3 = st.columns(3)
     with col1:
         Gender = st.selectbox("⚤ Genre", ["Male", "Female"])  # Utilisation de selectbox au lieu de radio
     with col2:
