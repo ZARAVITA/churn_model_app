@@ -39,7 +39,29 @@ st.set_page_config(page_title="Prédiction de Churn Bancaire", layout="wide")
 col1, col2 = st.columns([10, 2])
 with col1:
     st.title("Prédiction de Churn Bancaire")
-    st.markdown("Cette application consiste à prédire si un client de la banque quittera en donnant la probabilité. Le modèle derrière cette prédiction est un modèle de Deep Learning, notamment ANN (Artificial Neural Network)")
+    st.markdown("""
+## 🔍 Prédiction de Churn Bancaire  
+Anticipez le départ de vos clients grâce à un modèle avancé de **réseaux de neurones artificiels (ANN)**.  
+Avec une précision de **87,8 %**, notre algorithme analyse les comportements bancaires et estime la probabilité qu’un client quitte la banque.  
+
+### 🚀 Comment ça marche ?  
+1️⃣ **Entrez les informations du client** (score de crédit, âge, solde, etc.).  
+2️⃣ **Cliquez sur "Prédire"**.  
+3️⃣ **Obtenez immédiatement** la probabilité qu’il reste ou quitte la banque.  
+
+📊 **Pourquoi un modèle ANN ?**  
+La régression logistique atteint 80 % de précision, mais notre ANN, grâce à sa capacité à capturer des relations complexes, améliore la fiabilité des prévisions avec **87,8 % de précision**.  
+
+💡 **Optimisez la fidélisation client et réduisez l’attrition avec l’IA !**  
+
+---  
+
+**🔹 Projet réalisé par :** **ZARAVITA Haydar**  
+📧 Contact : [Votre email ou LinkedIn]  
+🎓 **Master en Modélisation Mathématique et Data Science**  
+📍 Passionné par l’IA, la Data Science et leur application dans le secteur financier.  
+""")
+
 with col2:
     st.image("DataPowerZLogo.png", width=290)
 
