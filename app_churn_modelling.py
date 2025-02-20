@@ -86,12 +86,14 @@ with st.form("client_info"):
         Tenure = st.number_input("📆 Ancienneté (années)", min_value=0, max_value=40, value=3)
     with col5:
         NumOfProducts = st.number_input("📦 Nombre de produits utilisés", min_value=1, max_value=4, value=2)
-
-    Balance = st.number_input("💰 Balance (restant dans le compte)", value=10000)
-    EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=100000)
-
-    IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
-    IsActiveMember =1 if IsActiveMembere=="Oui" else 0
+    col6, col7, col8= st.columns(3)
+    with col6:
+        Balance = st.number_input("💰 Balance (restant dans le compte)", value=10000)
+    with col7:
+        EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=100000)
+    with col8:
+        IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
+        IsActiveMember =1 if IsActiveMembere=="Oui" else 0
     submitted = st.form_submit_button("🚀 Prédire")
 
 if submitted:
