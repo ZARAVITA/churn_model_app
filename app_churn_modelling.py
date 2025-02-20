@@ -86,15 +86,19 @@ if submitted:
     leave_prob = prediction * 100
 
     # Créer un graphique circulaire
-    fig, ax = plt.subplots(figsize=(0.5,0.5))
-    ax.pie([stay_prob, leave_prob], labels=[f"Rester ({stay_prob:.2f}%)", f"Quitter ({leave_prob:.2f}%)"], 
+    fig, ax = plt.subplots(figsize=(2,2))
+    wedges, texts, autotexts = ax.pie([stay_prob, leave_prob], labels=[f"Rester ({stay_prob:.2f}%)", f"Quitter ({leave_prob:.2f}%)"], 
            colors=["green", "red"], 
-           autopct='%1.1f%%',textprops={'fontsize': 10},  # Taille du texte réduite
+           autopct='%1.1f%%',textprops={'fontsize': 8},  # Taille du texte réduite
            pctdistance=0.8,  # Distance des pourcentages par rapport au centre
-           labeldistance=2.1  # Distance des étiquettes par rapport au centre
+           labeldistance=1.2  # Distance des étiquettes par rapport au centre
     )
-    ax.axis('equal')  # Assure que le pie chart est un cercle.
+    # Réduire la taille du texte des labels
+    for text in texts + autotexts:
+        text.set_fontsize(8)
 
+    ax.axis('equal')  # Assure que le pie chart est bien circulaire
+    plt.tight_layout()  # Optimise l'affichage
     st.pyplot(fig)
 
     if prediction > 0.5:
