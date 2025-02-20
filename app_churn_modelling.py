@@ -72,15 +72,14 @@ with st.form("client_info"):
     #Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
     #CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
 
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3 = st.columns(4)
     with col1:
         Gender = st.selectbox("⚤ Genre", ["Male", "Female"])  # Utilisation de selectbox au lieu de radio
     with col2:
         HasCrCarde = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
         HasCrCard =1 if HasCrCarde=="Oui" else 0
     with col3:
-        Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
-    with col4: 
+        Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"]) 
         CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
     col3, col4, col5 = st.columns(3)
     with col3:
@@ -97,6 +96,7 @@ with st.form("client_info"):
     with col8:
         IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
         IsActiveMember =1 if IsActiveMembere=="Oui" else 0
+    CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
     submitted = st.form_submit_button("🚀 Prédire")
 
 if submitted:
