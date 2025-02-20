@@ -68,17 +68,30 @@ with col2:
 # Formulaire pour saisir les informations du client
 with st.form("client_info"):
     st.header("Informations du client")
-    Geography = st.selectbox("Region", ["France", "Spain", "Germany"])
-    CreditScore = st.slider("Score de crédit", 0, 850, 600)
-    Gender = st.radio("Genre", ["Male", "Female"])
-    Age = st.slider("Âge", 18, 100, 40)
-    Tenure = st.slider("Ancienneté (années)", 0, 40, 3)
-    Balance = st.number_input("Balance(restant dans le compte)", value=60000)
-    NumOfProducts = st.slider("Nombre de produits", 1, 4, 2)
-    HasCrCard = st.radio("Carte de crédit", [1, 0])
-    IsActiveMember = st.radio("Membre actif(1=actif)", [1, 0])
-    EstimatedSalary = st.number_input("Salaire estimé par an", value=50000)
-    submitted = st.form_submit_button("Prédire")
+
+    Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
+    CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
+
+    col1, col2 = st.columns(2)
+    with col1:
+        Gender = st.selectbox("⚤ Genre", ["Male", "Female"])  # Utilisation de selectbox au lieu de radio
+    with col2:
+        HasCrCard = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
+
+    col3, col4, col5 = st.columns(3)
+    with col3:
+        Age = st.number_input("📅 Âge", min_value=18, max_value=100, value=40)
+    with col4:
+        Tenure = st.number_input("📆 Ancienneté (années)", min_value=0, max_value=40, value=3)
+    with col5:
+        NumOfProducts = st.number_input("📦 Nombre de produits", min_value=1, max_value=4, value=2)
+
+    Balance = st.number_input("💰 Balance (restant dans le compte)", value=60000)
+    EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=50000)
+
+    IsActiveMember = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
+
+    submitted = st.form_submit_button("🚀 Prédire")
 
 if submitted:
     prediction = predict_churn(Geography, CreditScore, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
