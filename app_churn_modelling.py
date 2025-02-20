@@ -80,7 +80,6 @@ with st.form("client_info"):
         HasCrCard =1 if HasCrCarde=="Oui" else 0
     with col3:
         Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"]) 
-        CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
     col3, col4, col5 = st.columns(3)
     with col3:
         Age = st.number_input("📅 Âge", min_value=18, max_value=100, value=40)
