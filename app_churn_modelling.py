@@ -69,8 +69,8 @@ with col2:
 with st.form("client_info"):
     st.header("Informations du client")
 
-    Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
-    CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
+    #Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
+    #CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
