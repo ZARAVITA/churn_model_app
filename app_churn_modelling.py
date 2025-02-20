@@ -56,8 +56,8 @@ La régression logistique atteint 80 % de précision, mais notre ANN, grâce à 
 
 ---  
 
-**🔹 Projet réalisé par :** **ZARAVITA Haydar**  
-📧 Contact : [Votre email ou LinkedIn]  
+**🔹 Projet réalisé par :** **ZARAVITA **  
+📧 Contact : zaravitamds18@gmail.com  
 🎓 **Master en Modélisation Mathématique et Data Science**  
 📍 Passionné par l’IA, la Data Science et leur application dans le secteur financier.  
 """)
