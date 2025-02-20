@@ -77,7 +77,7 @@ with st.form("client_info"):
         Gender = st.selectbox("⚤ Genre", ["Male", "Female"])  # Utilisation de selectbox au lieu de radio
     with col2:
         HasCrCarde = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
-        HasCrCard ==1 if HasCrCarde="Oui" else 0
+        HasCrCard =1 if HasCrCarde=="Oui" else 0
 
     col3, col4, col5 = st.columns(3)
     with col3:
@@ -91,7 +91,7 @@ with st.form("client_info"):
     EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=100000)
 
     IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
-    IsActiveMember ==1 if IsActiveMembere="Oui" else 0
+    IsActiveMember =1 if IsActiveMembere=="Oui" else 0
     submitted = st.form_submit_button("🚀 Prédire")
 
 if submitted:
