@@ -33,7 +33,7 @@ def predict_churn(Geography, CreditScore, Gender, Age, Tenure, Balance, NumOfPro
     return prediction
 
 # Interface Streamlit
-st.set_page_config(page_title="Prédiction de Churn Bancaire", layout="wide")
+st.set_page_config(page_title="ChurnPredictorZ", layout="wide")
 
 # Ajouter le logo en haut à droite
 col1, col2 = st.columns([10, 2])
