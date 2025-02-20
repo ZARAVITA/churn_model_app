@@ -3,4 +3,3 @@ streamlit
 tensorflow
 matplotlib
 joblib
-pandas
