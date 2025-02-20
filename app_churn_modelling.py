@@ -39,7 +39,7 @@ st.set_page_config(page_title="Prédiction de Churn Bancaire", layout="wide")
 col1, col2 = st.columns([10, 2])
 with col1:
     st.title("Prédiction de Churn Bancaire")
-    st.markdown("Voici la description")
+    st.markdown("Cette application consiste à prédire si un client de la banque quittera en donnant la probabilité. Le modèle derrière cette prédiction est un modèle de Deep Learning, notamment ANN (Artificial Neural Network)")
 with col2:
     st.image("DataPowerZLogo.png", width=290)
 
