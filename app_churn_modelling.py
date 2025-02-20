@@ -76,7 +76,8 @@ with st.form("client_info"):
     with col1:
         Gender = st.selectbox("⚤ Genre", ["Male", "Female"])  # Utilisation de selectbox au lieu de radio
     with col2:
-        HasCrCard = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
+        HasCrCarde = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
+        HasCrCard = 1 if HasCrCarde="Oui" else 0
 
     col3, col4, col5 = st.columns(3)
     with col3:
@@ -84,13 +85,13 @@ with st.form("client_info"):
     with col4:
         Tenure = st.number_input("📆 Ancienneté (années)", min_value=0, max_value=40, value=3)
     with col5:
-        NumOfProducts = st.number_input("📦 Nombre de produits", min_value=1, max_value=4, value=2)
+        NumOfProducts = st.number_input("📦 Nombre de produits utilisés", min_value=1, max_value=4, value=2)
 
-    Balance = st.number_input("💰 Balance (restant dans le compte)", value=60000)
-    EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=50000)
+    Balance = st.number_input("💰 Balance (restant dans le compte)", value=10000)
+    EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=100000)
 
-    IsActiveMember = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
-
+    IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
+    IsActiveMember =1 if IsActiveMembere="Oui" else 0
     submitted = st.form_submit_button("🚀 Prédire")
 
 if submitted:
