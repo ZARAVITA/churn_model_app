@@ -40,7 +40,7 @@ col1, col2 = st.columns([10, 2])
 with col1:
     st.title("Prédiction de Churn Bancaire")
 with col2:
-    st.image("C://Users//ZARAVITA Haydar//Desktop//Pro//DataPowerZLogo.png", width=290)
+    st.image("DataPowerZLogo.png", width=290)
 
 # Formulaire pour saisir les informations du client
 with st.form("client_info"):
