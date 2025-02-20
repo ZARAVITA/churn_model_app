@@ -12,8 +12,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 # Charger le modèle et le scaler
-model = tf.keras.models.load_model("C:\\Users\\ZARAVITA Haydar\\Desktop\\Pro LinkedIn\\Test\\churn_model.h5")
-sc = joblib.load("C:\\Users\\ZARAVITA Haydar\\Desktop\\Pro LinkedIn\\Test\\scaler.pkl")
+model = tf.keras.models.load_model("churn_model.h5")
+sc = joblib.load("scaler.pkl")
 model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
 
 # Fonction pour prédire le churn
