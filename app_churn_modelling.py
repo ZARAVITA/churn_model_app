@@ -20,11 +20,12 @@ model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"]
 def predict_churn(Geography, CreditScore, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary):
     gender_encoded = 1 if Gender.lower() == "male" else 0
     geography_encoded = [0, 0, 0]  # [France, Spain, Germany]
-    if Geography.lower() == "france":
+    #"Nord & Centre[Tanger-Rabat-Casablanca-Fès]" "Intérieur & Est[Oujda-Nador-Béni Mellal]"  "Sud[Marrakech-Agadir-Laâyoune]"
+    if Geography.lower() == "Nord & Centre[Tanger-Rabat-Casablanca-Fès]":
         geography_encoded = [1, 0, 0]
-    elif Geography.lower() == "spain":
+    elif Geography.lower() == "Intérieur & Est[Oujda-Nador-Béni Mellal]":
         geography_encoded = [0, 1, 0]
-    elif Geography.lower() == "germany":
+    elif Geography.lower() == "Sud[Marrakech-Agadir-Laâyoune]":
         geography_encoded = [0, 0, 1]
     input_data = np.array([[*geography_encoded, CreditScore, gender_encoded, Age, Tenure, Balance, 
                          NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary]])
@@ -68,10 +69,6 @@ with col2:
 # Formulaire pour saisir les informations du client
 with st.form("client_info"):
     st.header("Informations du client")
-
-    #Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
-    #CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
-
     col1, col2, col3 = st.columns(3)
     with col1:
         Gender = st.selectbox("⚤ Genre", ["Male", "Female"])  # Utilisation de selectbox au lieu de radio
@@ -79,7 +76,9 @@ with st.form("client_info"):
         HasCrCarde = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
         HasCrCard =1 if HasCrCarde=="Oui" else 0
     with col3:
-        Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"]) 
+        #Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
+        #"Nord & Centre[Tanger-Rabat-Casablanca-Fès]" "Intérieur & Est[Oujda-Nador-Béni Mellal]"  "Sud[Marrakech-Agadir-Laâyoune]"
+        Geography = st.selectbox("Région", ["Nord & Centre[Tanger-Rabat-Casablanca-Fès]", "Intérieur & Est[Oujda-Nador-Béni Mellal]", "Sud[Marrakech-Agadir-Laâyoune]"])
     col3, col4, col5 = st.columns(3)
     with col3:
         Age = st.number_input("📅 Âge", min_value=18, max_value=100, value=40)
