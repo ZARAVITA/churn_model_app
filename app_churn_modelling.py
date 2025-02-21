@@ -103,7 +103,7 @@ if submitted:
     leave_prob = prediction * 100
 
     if prediction > 0.5:
-        st.error(f"🚨 Alerte ! Le client a {leave_prob:.2f}% de chances de quitter la banque.")
+        st.error(f"🚨PERTE IMMINENTE ! Un client à {leave_prob:.2f}% de risque de départ. Intervenez maintenant ou perdez-le définitivement !")
     else:
         st.success(f"✅ Bonne nouvelle ! Ce client a {stay_prob:.2f}% de chances de rester fidèle à votre banque")
-
+#🚨PERTE IMMINENTE ! Un client à 85.22% de risque de départ. Intervenez maintenant ou perdez-le définitivement !
