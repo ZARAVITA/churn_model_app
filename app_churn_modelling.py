@@ -105,4 +105,5 @@ if submitted:
     if prediction > 0.5:
         st.error(f"🚨 Alerte ! Le client a {leave_prob:.2f}% de chances de quitter la banque.")
     else:
-        st.success(f"✅Ne vous inquétez pas! Le client a {stay_prob:.2f}% de chances de rester.")
+        st.success(f"✅Le client est fidèle à votre banque ! Notre modèle estime à {stay_prob:.2f}% la probabilité qu’il reste.")
+#✅ Le client est fidèle à votre banque ! Notre modèle estime à 99,71 % la probabilité qu’il reste.
