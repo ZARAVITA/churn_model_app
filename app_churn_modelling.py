@@ -88,7 +88,7 @@ with st.form("client_info"):
     with col6:
         Balance = st.number_input("💰  Solde bancaire disponible", value=10000)
     with col7:
-        EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=100000)
+        EstimatedSalary = st.number_input("💵 Revenu annuel estimé", value=100000)
     with col8:
         IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
         IsActiveMember =1 if IsActiveMembere=="Oui" else 0
