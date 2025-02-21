@@ -40,7 +40,7 @@ st.set_page_config(page_title="ChurnPredictorZ", layout="wide")
 col1, col2 = st.columns([10, 2])
 with col1:
     st.title("ChurnPredictorZ")
-    st.markdown("
+    st.markdown("""
 👋 Bienvenue sur **ChurnPredictorZ** ! Cette application intelligente vous aide à prédire avec précision si un client risque de quitter la banque. 
 Grâce à l'intelligence artificielle, prenez des décisions éclairées pour optimiser la fidélisation client et améliorer votre stratégie bancaire. 🚀
 ## 🔍 DESCRIPTION  
