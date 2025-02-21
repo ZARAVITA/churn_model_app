@@ -76,8 +76,6 @@ with st.form("client_info"):
         HasCrCarde = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
         HasCrCard =1 if HasCrCarde=="Oui" else 0
     with col3:
-        #Geography = st.selectbox("🌍 Région", ["France", "Spain", "Germany"])
-        #"Nord & Centre[Tanger-Rabat-Casablanca-Fès]" "Intérieur & Est[Oujda-Nador-Béni Mellal]"  "Sud[Marrakech-Agadir-Laâyoune]"
         Geography = st.selectbox("Région", ["Nord & Centre[Tanger-Rabat-Casablanca-Fès]", "Intérieur & Est[Oujda-Nador-Béni Mellal]", "Sud[Marrakech-Agadir-Laâyoune]"])
     col3, col4, col5 = st.columns(3)
     with col3:
@@ -88,13 +86,13 @@ with st.form("client_info"):
         NumOfProducts = st.number_input("📦 Nombre de produits utilisés", min_value=1, max_value=4, value=2)
     col6, col7, col8= st.columns(3)
     with col6:
-        Balance = st.number_input("💰 Balance (restant dans le compte)", value=10000)
+        Balance = st.number_input("💰  Solde bancaire disponible", value=10000)
     with col7:
         EstimatedSalary = st.number_input("💵 Salaire estimé par an", value=100000)
     with col8:
         IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
         IsActiveMember =1 if IsActiveMembere=="Oui" else 0
-    CreditScore = st.slider("💳 Score de crédit", 0, 850, 600)
+    CreditScore = st.slider("💳 Score de crédit", 300, 850, 500)
     submitted = st.form_submit_button("🚀 Prédire")
 
 if submitted:
