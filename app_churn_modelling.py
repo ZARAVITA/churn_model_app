@@ -18,7 +18,7 @@ model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"]
 
 # Fonction pour prédire le churn
 def predict_churn(Geography, CreditScore, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary):
-    gender_encoded = 1 if Gender.lower() == "male" else 0
+    gender_encoded = 1 if Gender.lower() == "homme" else 0
     geography_encoded = [0, 0, 0]  # [France, Spain, Germany]
     #"Nord & Centre[Tanger-Rabat-Casablanca-Fès]" "Intérieur & Est[Oujda-Nador-Béni Mellal]"  "Sud[Marrakech-Agadir-Laâyoune]"
     if Geography.lower() == "Nord & Centre[Tanger-Rabat-Casablanca-Fès]":
@@ -71,7 +71,7 @@ with st.form("client_info"):
     st.header("Informations du client")
     col1, col2, col3 = st.columns(3)
     with col1:
-        Gender = st.selectbox("⚤ Genre", ["Male", "Female"])  # Utilisation de selectbox au lieu de radio
+        Gender = st.selectbox("⚤ Genre", ["Homme", "Femme"])  # Utilisation de selectbox au lieu de radio
     with col2:
         HasCrCarde = st.selectbox("💳 Carte de crédit", ["Oui", "Non"], index=0)
         HasCrCard =1 if HasCrCarde=="Oui" else 0
