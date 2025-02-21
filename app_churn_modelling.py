@@ -40,8 +40,10 @@ st.set_page_config(page_title="ChurnPredictorZ", layout="wide")
 col1, col2 = st.columns([10, 2])
 with col1:
     st.title("ChurnPredictorZ")
-    st.markdown("👋 Bienvenue sur **ChurnPredictorZ** ! Cette application intelligente vous aide à prédire avec précision si un client risque de quitter la banque. Grâce à l'intelligence artificielle, prenez des décisions éclairées pour optimiser la fidélisation client et améliorer votre stratégie bancaire. 🚀")
-## 🔍 Prédiction de Churn Bancaire  
+    st.markdown("
+👋 Bienvenue sur **ChurnPredictorZ** ! Cette application intelligente vous aide à prédire avec précision si un client risque de quitter la banque. 
+Grâce à l'intelligence artificielle, prenez des décisions éclairées pour optimiser la fidélisation client et améliorer votre stratégie bancaire. 🚀
+## 🔍 DESCRIPTION  
 Anticipez le départ de vos clients grâce à un modèle avancé de **réseaux de neurones artificiels (ANN)**.  
 Avec une précision de **87,8 %**, notre algorithme analyse les comportements bancaires et estime la probabilité qu’un client quitte la banque.  
 
@@ -59,7 +61,7 @@ La régression logistique atteint 80 % de précision, mais notre ANN, grâce à 
 
 **🔹 Projet réalisé par :**  **ZARAVITA**  
 📧 Contact : zaravitamds18@gmail.com  
-🎓 **Master en Modélisation Mathématique et Data Science**  
+🎓 **Etudiant en Master en Modélisation Mathématique et Data Science**  
 📍 Passionné par l’IA, la Data Science et leur application dans le secteur financier.  
 """)
 
