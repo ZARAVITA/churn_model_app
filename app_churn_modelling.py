@@ -85,12 +85,12 @@ with st.form("client_info"):
     with col4:
         Tenure = st.number_input("📆 Ancienneté (années)", min_value=0, max_value=40, value=3)
     with col5:
-        NumOfProducts = st.number_input("📦 Nombre de produits utilisés", min_value=1, max_value=4, value=2)
+        NumOfProducts = st.number_input("📦 Nombre de produits utilisés", min_value=1, max_value=4, value=4)
     col6, col7, col8= st.columns(3)
     with col6:
-        Balance = st.number_input("💰  Solde bancaire disponible", value=10000)
+        Balance = st.number_input("💰  Solde bancaire disponible", value=7500)
     with col7:
-        EstimatedSalary = st.number_input("💵 Revenu annuel estimé", value=100000)
+        EstimatedSalary = st.number_input("💵 Revenu annuel estimé", value=40000)
     with col8:
         IsActiveMembere = st.selectbox("👥 Membre actif", ["Oui", "Non"], index=0)
         IsActiveMember =1 if IsActiveMembere=="Oui" else 0
